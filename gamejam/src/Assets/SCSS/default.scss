@@ -1,0 +1,167 @@
+@import "_config.scss";
+
+body{
+  background: $white;
+}
+
+.header {
+  position: fixed;
+  display: block;
+  width: 100%;
+  background: $darkerGrey;
+  color: $black;
+  height: 150px;
+  z-index: 1;
+  margin-top: -150px;
+  .logo{
+    position: relative;
+    top: 50%; left: 15px;
+    @include translateY(-50%);
+  }
+
+  nav, nav ul, nav ul li{
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    @include translateY(-50%);
+
+    ul li {
+      list-style-type: none;
+      display: inline-block;
+      margin-right: 15px;
+      text-decoration: none;
+    }
+    a {
+    font-size: 25px;
+    line-height: normal;
+      &:hover, :link, :active{
+        text-decoration: none;
+        font-size: 30px;
+
+      }
+    }
+  }
+}
+
+.home {
+  background: $lightBlue;
+  margin-top: 150px;
+
+  p{
+  font-size: 23px;
+  color: $white;
+  }
+
+  .middle {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .tmpCarousel {
+    margin: auto;
+    z-index: 0;
+    margin-bottom: 20px;
+    div{
+      width: 640px;
+      height: 360px;
+      padding: 5px;
+      padding-bottom: 5px;
+      img{
+        max-width: 640px;
+        max-height: 360px;
+        padding: 50px;
+
+      }
+    }
+  }
+}
+
+.games{
+  background: $lightGrey;
+  position: relative;
+  margin-top: 20px;
+  box-sizing: border-box;
+
+  .gamelist {
+    background: $yellow;
+    margin: auto;
+
+    .title {
+      display: inline;
+      border-bottom: 8px solid $lightBlue;
+      font-family: $oswald;
+    }
+
+    .col-sm-6{
+      margin: auto;
+      padding: 15px;
+      img {
+        padding: 1px;
+        border: 1px solid $black;
+      }
+    }
+  }
+
+}
+
+.about{
+  height: 400px;
+  margin-top: 20px;
+  display: table;
+  position: relative;
+  background: $white;
+  .middle{
+    display: table-cell;
+    vertical-align: middle;
+  h1{
+    font-family: "Oswald", sans-serif;
+    text-align: center;
+
+  }
+  p{
+    font-family: $opensans;
+    text-align: center;
+  }
+  }
+}
+
+.contact{
+  width: 100%;
+  background: $yellow;
+  height: 500px;
+  position: relative;
+  margin-top: 20px;
+  .inner{
+    padding-right: 20px;
+    vertical-align: middle;
+    width: 600px;
+    height: 300px;
+    margin-top: 50px;
+    h1 {
+      font-family: "Oswald", sans-serif;
+      text-align: center;
+    }
+  }
+  .address{
+    display: table;
+    width: 600px;
+    vertical-align: middle;
+    margin-top: 35%;
+    .center{
+      display: table-cell;
+      height: 100px;
+      p{
+        position: relative;
+        font-family: $opensans;
+        font-size: 15px;
+        text-align: right;
+        vertical-align: middle;
+      }
+    }
+  }
+}

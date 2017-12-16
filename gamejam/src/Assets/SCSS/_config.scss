@@ -1,0 +1,53 @@
+/*
+  Variables
+*/
+$black: #000000;
+$white: #ffffff;
+$lightGrey: #e6e6e6;
+$darkerGrey: #CDCDCD;
+$red: #ff1755;
+$lightBlue: #49CAEE;
+$yellow: #FCF26F;
+
+/*
+  Fonts
+*/
+
+$oswald: 'Oswald', sans-serif;
+$opensans: 'Open Sans', sans-serif;
+@font-face {
+    font-family: 'Oswald', sans-serif;
+    src: url("https://fonts.googleapis.com/css?family=Oswald");
+}
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+  src: url("https://fonts.googleapis.com/css?family=Open+Sans");
+}
+
+
+/*
+Mixins
+*/
+
+@mixin translateY($e){
+  -webkit-transform: translateY($e);
+  -moz-transform: translateY($e);
+  transform: translateY($e);
+}
+
+@mixin transition($e){
+  -webkit-transition:$e;
+  -moz-transition:$e;
+  transition:$e;
+}
+
+a {
+  color: black;
+
+  @include transition(.4s ease);
+  &:hover{
+    cursor: default;
+    color: $red;
+    @include transition(.7s ease-in-out)
+  }
+}

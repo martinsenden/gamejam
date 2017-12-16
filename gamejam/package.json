@@ -1,0 +1,27 @@
+{
+  "name": "gamejam",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "google-map-react": "^0.25.0",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-html5video": "^2.5.1",
+    "react-responsive-carousel": "^3.1.30",
+    "react-scripts": "1.0.17",
+    "react-video-players": "^0.1.10"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-changed": "^3.1.1",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
+  }
+}
