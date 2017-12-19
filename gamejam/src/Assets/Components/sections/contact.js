@@ -8,7 +8,6 @@ class Contact extends Component {
         <div className="container-fluid contact">
             <div class="row">
               <div class="col-md-6">
-              <div class="row">
                 <div className="address col-md-12">
                   <div className="center">
                     <p>
@@ -17,12 +16,11 @@ class Contact extends Component {
                       Austria<br/>
                       pie@fh-hagenberg.at<br/>
                     </p>
-                  </div>
                 </div>
                 </div>
             </div>
-              <div class="col-md-6 inner">
-                  <h1>Contact</h1>
+              <div class="col-md-4 inner">
+                  <h1 class="title">Contact</h1>
                   <SimpleMap/>
               </div>
           </div>
