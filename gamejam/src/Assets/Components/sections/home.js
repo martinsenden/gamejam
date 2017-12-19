@@ -40,11 +40,11 @@ class Home extends Component {
                       <img className="d-block img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Matterhorn-600px.jpg"/>
                     </div>
                 </div>
-                <a className="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <a className="carousel-control-prev carousel-control" href="#myCarousel" role="button" data-slide="prev">
                   <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span className="sr-only">Previous</span>
                 </a>
-                <a className="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <a className="carousel-control-next carousel-control" href="#myCarousel" role="button" data-slide="next">
                   <span className="carousel-control-next-icon" aria-hidden="true"></span>
                   <span className="sr-only">Next</span>
                 </a>

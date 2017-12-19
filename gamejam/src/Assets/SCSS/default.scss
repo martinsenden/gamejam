@@ -1,7 +1,12 @@
 @import "_config.scss";
 
 body{
-  background: $white;
+  background: $background;
+  h1{
+    display: inline;
+    border-bottom: 8px solid $lightBlue;
+    font-family: $oswald;
+  }
 }
 
 .header {
@@ -49,8 +54,10 @@ body{
 }
 
 .home {
-  background: $lightBlue;
+  background: $backgroundOpaque;
   margin-top: 150px;
+  width: 95%;
+
 
   p{
   font-size: 23px;
@@ -82,13 +89,12 @@ body{
 }
 
 .games{
-  background: $lightGrey;
+  background: $backgroundOpaque;
   position: relative;
-  margin-top: 20px;
+  margin-top: 30px;
   box-sizing: border-box;
-
   .gamelist {
-    background: $yellow;
+    background: $white;
     margin: auto;
 
     .title {
@@ -97,7 +103,7 @@ body{
       font-family: $oswald;
     }
 
-    .col-sm-6{
+    .game{
       margin: auto;
       padding: 15px;
       img {
@@ -110,14 +116,21 @@ body{
 }
 
 .about{
-  height: 400px;
-  margin-top: 20px;
+  margin-top: 30px;
   display: table;
   position: relative;
   background: $white;
+
   .middle{
-    display: table-cell;
     vertical-align: middle;
+
+  .opaque{
+    background: $background;
+    opacity: 0.5;
+  }
+  .shown{
+    background: $white;
+  }
   h1{
     font-family: "Oswald", sans-serif;
     text-align: center;
@@ -125,7 +138,9 @@ body{
   }
   p{
     font-family: $opensans;
-    text-align: center;
+    text-align:left;
+    font-size: 14px;
+
   }
   }
 }
@@ -135,7 +150,7 @@ body{
   background: $yellow;
   height: 500px;
   position: relative;
-  margin-top: 20px;
+  margin-top: 30px;
   .inner{
     padding-right: 20px;
     vertical-align: middle;
