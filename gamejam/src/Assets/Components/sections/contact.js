@@ -13,7 +13,7 @@ class Contact extends Component {
                   <div className="center">
                     <p>
                       Softwarepark 23<br/>
-                      4232 Hagenberg im Mühlkreis <br/>
+                      4232 Hagenberg <br/>
                       Austria<br/>
                       pie@fh-hagenberg.at<br/>
                     </p>
