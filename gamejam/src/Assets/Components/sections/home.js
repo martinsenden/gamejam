@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import YouTube from 'react-youtube';
-import { Carousel } from 'react-responsive-carousel';
+//import { Carousel } from 'react-responsive-carousel';
 import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
-import logo from './logo2.png';
-import Slider from 'react-slick';
+//import logo from './logo2.png';
+//import Slider from 'react-slick';
+import slide1 from '../../Resources/Images/Misc/IMG_9208.jpg';
+import slide2 from '../../Resources/Images/Misc/IMG_9213.jpg';
+import slide3 from '../../Resources/Images/Misc/IMG_9230.jpg';
 
 class Home extends Component {
 
@@ -12,32 +15,27 @@ class Home extends Component {
           playerVars: {
             autoplay: 0,
             modestbranding: 1,
-            showinfo: 0
+            showinfo: 0,
           }
         };
 
-    var settings = {
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      adaptiveHeight: false
-    }
-
     return (
-
         <div className="container-fluid home">
           <div className="row">
             <div className="col-md-6 offset-md-6 tmpCarousel">
-              <div id="myCarousel" className="carousel slide" data-ride="carousel">
+              <div id="myCarousel" className="carousel slide" data-ride="carousel" data-interval="false">
                 <div className="carousel-inner" role="listbox">
                     <div className="carousel-item active">
-                      <YouTube videoId="zZm7GixmznU" opts={opts} />
+                      <YouTube className="ytplayer" videoId="M7lc1UVf-VE" opts={opts} />
                     </div>
                     <div className="carousel-item">
-                      <img className="d-block img-fluid" src={ logo }/>
+                      <img className="d-block img-fluid carouselImage" src={ slide1 }/>
                     </div>
                     <div className="carousel-item">
-                      <img className="d-block img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Matterhorn-600px.jpg"/>
+                      <img className="d-block img-fluid carouselImage" src={ slide2 }/>
+                    </div>
+                    <div className="carousel-item">
+                      <img className="d-block img-fluid carouselImage" src={ slide3 }/>
                     </div>
                 </div>
                 <a className="carousel-control-prev carousel-control" href="#myCarousel" role="button" data-slide="prev">

@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.png';
+import logo from '../../Resources/Images/Misc/logo.png';
 
 class Header extends Component {
   render() {
     return (
       <header>
-      <div className="header">
-        <div className="logo">
-          <img src={ logo } alt="" width="151,8" height="131,2"/>
-        </div>
-        <nav>
-          <ul>
-          <li><a href="#games">Games</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+        <div className="container-fluid header">
+          <div className="row">
+            <div className="col-md-4">
+                <img className="logo" src={ logo } alt=""/>
+            </div>
+            <div className="col-md-8">
+              <nav className="navigation">
+                <ul className="list">
+                  <li className="listitem"><a className="link" href="#games">Games</a></li>
+                  <li className="listitem"><a className="link" href="#about">About</a></li>
+                  <li className="listitem"><a className="link" href="#contact">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
         </div>
       </header>
     );

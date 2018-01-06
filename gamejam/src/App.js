@@ -6,7 +6,6 @@ import Home from './Assets/Components/sections/home.js';
 import Games from './Assets/Components/sections/games';
 import About from './Assets/Components/sections/about';
 import Contact from './Assets/Components/sections/contact';
-import $ from 'jquery';
 
 class App extends Component {
   render() {

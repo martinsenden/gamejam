@@ -6,8 +6,8 @@ class Contact extends Component {
   render() {
     return (
         <div className="container-fluid contact">
-            <div class="row">
-              <div class="col-md-6">
+            <div className="row">
+              <div className="col-md-6">
                 <div className="address col-md-12">
                   <div className="center">
                     <p>
@@ -19,8 +19,8 @@ class Contact extends Component {
                 </div>
                 </div>
             </div>
-              <div class="col-md-4 inner">
-                  <h1 class="title">Contact</h1>
+              <div className="col-md-4 inner">
+                  <h1 className="title">Contact</h1>
                   <SimpleMap/>
               </div>
           </div>
