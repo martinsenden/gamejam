@@ -18,16 +18,16 @@ body{
   display: block;
   background: $darkerGrey;
   color: $black;
-  height: 130px;
+  max-height: 20%;
   z-index: 1;
   margin-top: -150px;
   .logo{
     position: relative;
-    top: 52.5%;
+    top: 50%;
     left: 15px;
     margin: auto;
     @include translateY(-50%);
-    max-height: 120px;
+    max-height: 100px;
   }
 
   nav, nav ul, nav ul li{
@@ -51,6 +51,7 @@ body{
     .link {
     font-size: 25px;
     line-height: normal;
+    font-family: $oswald;
       &:hover, :link, :active{
         text-decoration: none;
         font-size: 30px;
@@ -63,7 +64,7 @@ body{
 .home {
   background: $backgroundOpaque;
   margin-top: 150px;
-  width: 95%;
+  width: 100%;
 
 
   p{
@@ -71,16 +72,12 @@ body{
   color: $white;
   }
 
-  .middle {
-    display: table-cell;
-    vertical-align: middle;
-  }
-
   .tmpCarousel {
     margin: auto;
     z-index: 0;
     margin-bottom: 20px;
     margin-top: 20px;
+    height: auto;
      .carousel-control-prev{
        width: 5%;
        margin-left: -10%;
@@ -99,13 +96,12 @@ body{
 
     }
       .ytplayer{
-        max-width: 578px;
-        padding: 10px;
+        //max-width: 578px;
+        //max-width: 100%;
+        width: 100%;
       }
       .carouselImage{
-        //max-width: 640px;
-        max-height: 366px;
-        //padding: 50px;
+        //max-height: 366px;
       }
   }
 }
@@ -114,6 +110,7 @@ body{
   background: $backgroundOpaque;
   position: relative;
   margin-top: 30px;
+
   .gamelist {
     background: $white;
     margin: auto;
@@ -123,27 +120,52 @@ body{
       border-bottom: 8px solid $lightBlue;
       font-family: $oswald;
     }
-
+    .container{
+      &:hover{
+        .middle{
+          opacity: 1;
+        }
+        .image{
+          opacity: 0.5;
+        }
+      }
+    }
     .game{
       margin: auto;
       padding: 15px;
 
-      .overlay{
-          display: none;
+      .middle {
+        transition: 0.7s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
       }
 
-      :hover{
-        .overlay{
-          display: inline;
-          background: $black;
-        }
+      .text {
+        background-color: $lightGrey;
+        color: $black;
+        font-family: $opensans;
+        font-size: 20px;
+        padding: 5px 10%;
+        font-weight: bold;
+        font-stretch: extra-expanded;
       }
 
-      img {
+      .image {
         padding: 1px;
         border: 1px solid $black;
-        width: 85%;
-        //height: 50%;
+        width: 100%;
+        display: block;
+        transition: .5s ease;
+        backface-visibility: hidden;
+          &:hover{
+            opacity: 0.5;
+          }
+
       }
 
     }
@@ -157,10 +179,9 @@ body{
       margin-bottom: 50px;
       margin-right: 15px;
 
-      button{
+      .backbutton{
         position: relative;
-        font-size: 10px;
-        height: 10px;
+        width: 15px;
       }
 
       .gametitle {
@@ -247,12 +268,10 @@ body{
   }
   .address{
     display: table;
-    width: 600px;
     vertical-align: middle;
-    margin-top: 35%;
+    margin-top: 10%;
     .center{
       display: table-cell;
-      height: 100px;
       p{
         position: relative;
         font-family: $opensans;

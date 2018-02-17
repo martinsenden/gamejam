@@ -4,7 +4,8 @@
         "id": "001",
         "title": "CATharsis",
         "description": "You are a cat and your owner has neglected you for too long, so it's time for revenge! Cause as much mayhem as you can before the alarm clock wakes him up. While you're redecorating the room always keep an eye on the clock.  If the timer is close to zero punch the clock to press the Snooze-Button, it will give you additional time! Now go and do your duty as a vengeful cat!",
-        "images": [],
+        "images": [{"url": "https://i.imgur.com/3kvXJT0.png"},
+        {"url": "https://i.imgur.com/1O7RhCd.png"}],
         "teammembers": "Weidenhausen Gabriel, Frenkenberger Nik, R¸hrlinger Moritz, P¸hringer Christine",
         "downloadlink": "",
         "teamname": "Byte my Ascii"
@@ -13,7 +14,12 @@
         "id": "002",
         "title": "Brut Force",
         "description": "This game is about a solicitous hen who just wants to keep her eggs warm. But the batteries for the so important heating lamp need to be recharged all the time! But watch out - don't let them in for too long! So this simple task turns into a action-packed adventure full of fun, obstacles and batteries!",
-        "images": ["src/Assets/Components/sections/Gameimages/Gamelist/Catharsis.png"],
+        "images": [{"url": "../../Components/sections/Gameimages/Brutforce/BrutForce.png"},
+          {"url": "../../Resources/Images/Gameimages/Brutforce/screenshot_1.png"},
+          {"url": "../../Resources/Images/Gameimages/Brutforce/screenshot_2.png"},
+          {"url": "../../Resources/Images/Gameimages/Brutforce/screenshot_3.png"},
+          {"url": "../../Resources/Images/Gameimages/Brutforce/screenshot_4.png"}
+        ],
         "teammembers": "Jacqueline Lowe, Julia Hauptmann, Lukas Paul, Florian Friedrich",
         "downloadlink": "",
         "teamname": "Curly Braces"
@@ -23,7 +29,11 @@
         "id": "003",
         "title": "Counttown",
         "description": "Space Engineer Nole got a last minute assignment: Fix the rocket while the countdown goes down and the rocket starts. Unfortunately the rocket is so rusty, that it continues to break - so don't stop hammering and fixing stuff! (More repairing means more points!). First Nole has to find one of the problems (could be a broken wing, tank, pipe, engine..), then fix it with the according tool. On the console at the bottom he can see how much time he has left.",
-        "images": [],
+        "images": [{"url": "../../Resources/Images/Gameimages/Counttown/Counttown.png"},
+          {"url": "../../Resources/Images/Gameimages/Counttown/screen 1.png"},
+          {"url": "../../Resources/Images/Gameimages/Counttown/screen 2.png"},
+          {"url": "../../Resources/Images/Gameimages/Counttown/screen 3.png"},
+          {"url": "../../Resources/Images/Gameimages/Counttown/screen 4.png"}],
         "teammembers": "Friedrich Bachinger, Niklas Guth, Eva-Maria Hobl, Daniel Lanner, Johannes Lugstein, Susanne Teufelauer",
         "downloadlink": "",
         "teamname": "RainbowChillyPuppers"
@@ -31,29 +41,39 @@
 
         {
         "id": "004",
+        "title": "Kraut und Rueben",
+        "description": "In this game King Kraut has to fight off monstrous Rüben with exploding crystals on a tiny magical planet.",
+        "images": [{"url": "../../Resources/Images/Gameimages/Kraut/Kraut.png"},
+          {"url": "../../Resources/Images/Gameimages/Kraut/Screenshot02.png"},
+          {"url": "../../Resources/Images/Gameimages/Kraut/Screenshot03.png"},
+          {"url": "../../Resources/Images/Gameimages/Kraut/Screenshot04.png"},
+          {"url": "../../Resources/Images/Gameimages/Kraut/Screenshot05.png"}],
+        "teammembers": "Markus Hadinger, Matthias Patscheider, Bianca Zankl",
+        "downloadlink": "",
+        "teamname": "Final_final_v02"
+      },
+
+      {
+        "id": "005",
         "title": "Santa's Dash Driver",
         "description": "It is Christmas Eve, joy and love fills every home, everybody is eager to open presents and enjoy their evening with family and friends. Well, everybody except you, because you forgot to do your job to deliver said presents and are now in danger of being fired...again. So hurry up and deliver as many presents as possible before time runs out and whatever God you believe in has mercy on your poor soul.",
-        "images": [],
+        "images": [{"url": "../../Resources/Images/Gameimages/Santa/Santa.png"},
+          {"url": "../../Resources/Images/Gameimages/Santa/screenshot1.png"},
+          {"url": "../../Resources/Images/Gameimages/Santa/screenshot2.png"},
+          {"url": "../../Resources/Images/Gameimages/Santa/screenshot3.png"},
+          {"url": "../../Resources/Images/Gameimages/Santa/screenshot4.png"}],
         "teammembers": "Daniela Krückel, Pascal Pilat, Barbara Reiter, Elias Wagner, Andreas Ziegelwanger",
         "downloadlink": "",
         "teamname": "Voxel Vikings"
       },
 
       {
-      "id": "005",
-      "title": "Kraut und Rueben",
-      "description": "In this game King Kraut has to fight off monstrous R¸ben with exploding crystals on a tiny magical planet.",
-      "images": [],
-      "teammembers": "Markus Hadinger, Matthias Patscheider, Bianca Zankl",
-      "downloadlink": "",
-      "teamname": "Final_final_v02"
-      },
-
-      {
       "id": "006",
       "title": "Smashtronaut",
       "description": "A clumsy astronaut slept on the Job on Mars and now they’re missing the rocket launch home!!Your objectve is to get to the rocket in tme while struggling with (not so intuitve) controls and obstacles along the way",
-      "images": [],
+      "images": [{"url": "../../Resources/Images/Gameimages/Smash/Smash.png"},
+        {"url": "../../Resources/Images/Gameimages/Smash/Screenshot1.png"},
+        {"url": "../../Resources/Images/Gameimages/Smash/Screenshot2.png"}],
       "teammembers": "Knab Theodor, Pach Marleigh, Kainz Fabian, Bassenge Leoni",
       "downloadlink": "",
       "teamname": "Happy Toasts"
@@ -62,7 +82,10 @@
       "id": "007",
       "title": "You Only Die Once",
       "description": "After you are diagnosed with an incurable illness you have precisely five minutes left to live. However, there are still plenty of things you need to do before you finally kick the bucket. Clean up as many of your life's loose ends as possible to increase you score - based on which your last day on earth will be rated. Also, you're a weasel.",
-      "images": [],
+      "images": [{"url": "../../Resources/Images/Gameimages/YouOnly/YouOnly.png"},
+        {"url": "../../Resources/Images/Gameimages/YouOnly/screen1.png"},
+        {"url": "../../Resources/Images/Gameimages/YouOnly/screen2.png"},
+        {"url": "../../Resources/Images/Gameimages/YouOnly/screen3.png"}],
       "teammembers": "Rene Buchmayer, Isabella Rathner, Verena Mappes, Thomas Pichler, Florian Rath",
       "downloadlink": "",
       "teamname": "Robotic Weasel Assault"

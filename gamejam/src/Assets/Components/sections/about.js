@@ -1,13 +1,23 @@
 import React, { Component } from 'react';
+import ScrollableAnchor from 'react-scrollable-anchor';
+import { configureAnchors } from 'react-scrollable-anchor';
+
 
 class About extends Component {
+
+  componentWillMount(){
+    configureAnchors({offset: -140, scrollDuration: 600});
+  }
+
   render() {
     return (
         <div className="container-fluid about">
           <div className="row middle">
           <div className="col-md-7 opaque"></div>
             <div className="col-md-5 shown">
+            <ScrollableAnchor id={'about'}>
               <h1>About section</h1>
+            </ScrollableAnchor>
               <p>
               <br/>
               Game jams have become incredibly popular in the last few years. These events require participants to create a working computer game within a very limited time period, usually just 48 hours. The topic is announced at the beginning of the event, and teams then start brainstorming and begin implementing their games as quickly as possible in order to finish in time. At the end of the event, the games are often demonstrated in a public context or the participants catch some much needed sleep.

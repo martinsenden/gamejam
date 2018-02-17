@@ -4,11 +4,10 @@ import logo from '../../Resources/Images/Misc/logo.png';
 class Header extends Component {
   render() {
     return (
-      <header>
         <div className="container-fluid header">
           <div className="row">
             <div className="col-md-4">
-                <img className="logo" src={ logo } alt=""/>
+                <a href="#home"><img className="logo" src={ logo } alt=""/></a>
             </div>
             <div className="col-md-8">
               <nav className="navigation">
@@ -21,7 +20,6 @@ class Header extends Component {
             </div>
           </div>
         </div>
-      </header>
     );
   }
 }

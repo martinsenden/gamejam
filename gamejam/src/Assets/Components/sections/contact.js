@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import SimpleMap from './simplemap.js';
+import ScrollableAnchor from 'react-scrollable-anchor'
+
 
 class Contact extends Component {
 
@@ -7,8 +9,7 @@ class Contact extends Component {
     return (
         <div className="container-fluid contact">
             <div className="row">
-              <div className="col-md-6">
-                <div className="address col-md-12">
+              <div className="col-md-6 address">
                   <div className="center">
                     <p>
                       Softwarepark 23<br/>
@@ -17,10 +18,11 @@ class Contact extends Component {
                       pie@fh-hagenberg.at<br/>
                     </p>
                 </div>
-                </div>
             </div>
               <div className="col-md-4 inner">
+                <ScrollableAnchor id={'contact'}>
                   <h1 className="title">Contact</h1>
+                </ScrollableAnchor>
                   <SimpleMap/>
               </div>
           </div>

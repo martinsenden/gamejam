@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import YouTube from 'react-youtube';
-//import { Carousel } from 'react-responsive-carousel';
 import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
-//import logo from './logo2.png';
-//import Slider from 'react-slick';
 import slide1 from '../../Resources/Images/Misc/IMG_9208.jpg';
 import slide2 from '../../Resources/Images/Misc/IMG_9213.jpg';
 import slide3 from '../../Resources/Images/Misc/IMG_9230.jpg';
+import ScrollableAnchor from 'react-scrollable-anchor';
+
 
 class Home extends Component {
 
@@ -20,8 +19,12 @@ class Home extends Component {
         };
 
     return (
+
         <div className="container-fluid home">
           <div className="row">
+          <ScrollableAnchor id={'home'}>
+          <h4></h4></ScrollableAnchor>
+
             <div className="col-md-6 offset-md-6 tmpCarousel">
               <div id="myCarousel" className="carousel slide" data-ride="carousel" data-interval="false">
                 <div className="carousel-inner" role="listbox">

@@ -48,7 +48,7 @@ a {
   @include transition(.4s ease);
   &:hover{
     cursor: default;
-    color: $white;
+    color: $yellow;
     @include transition(.7s ease-in-out)
   }
 }
