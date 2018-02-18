@@ -16,33 +16,59 @@ var jsonData = require('../../Resources/Data/games.json');
 class Games extends Component {
 
   hideGamesection(){
-    document.getElementById("gamedetails").style.visibility = 'hidden';
+    //document.getElementById("gamedetails").style.visibility = 'hidden';
+    $(".gamedetails").css({"visibility": "hidden"});
+    $(".gamedetails").removeClass("visible");
+    $(".gamedetails").addClass("hidden");
+    console.log("hello");
   }
 
   fillGameCarousel(id){
     var m = jsonData.games[id].images;
-    $(document).ready(function(){
-      for(var i=0 ; i< m.length ; i++) {
-        if(i===0){
-          $('<div className="carousel-item active"><img className="d-block img-fluid" src="'+m[i].url+'">  </div>').appendTo('.gamecarousel');
-        } else{
-        $('<div className="carousel-item"><img className="d-block img-fluid" src="'+m[i].url+'">  </div>').appendTo('.gamecarousel');
+    console.log(m);
+    /*for(var i=0; i< m.length; i++) {
+      if(i===0){
+        $('<div className="carousel-item gamecarouselitem active"><img className="d-block img-fluid" src="'+m[i].url+'">  </div>').appendTo('.gamecarousel');
+      } else{
+        $('<div className="carousel-item gamecarouselitem"><img className="d-block img-fluid" src="'+m[i].url+'">  </div>').appendTo('.gamecarousel');
       }
+    }*/
+
+    for(var i=0 ; i< m.length ; i++) {
+    $('<div class="carousel-item gamecarouselitem"><img src="'+m[i].url+'"></div>').appendTo('.gamecarousel');
     }
-    });
+  $('.gamecarouselitem').first().addClass('active');
+  //$('.carousel-indicators > li').first().addClass('active');
+  //$('#gameCarousel').carousel();
   }
 
+
+
   showGamesection(id){
+    if ($('.gamedetails').hasClass('hidden')){
+      $(".gamecarousel").empty();
+    $('.gamedetails').removeClass('hidden');
+    $('.gamedetails').addClass("visible");
     document.getElementById("gamedetails").style.visibility = 'visible';
     document.getElementById("gametitle").innerHTML = jsonData.games[id].title;
     this.fillGameCarousel(id);
     document.getElementById("gamedescription").innerHTML = jsonData.games[id].description;
     document.getElementById("teamname").innerHTML = jsonData.games[id].teamname;
     document.getElementById("teammembers").innerHTML = jsonData.games[id].teammembers;
-
   }
 
+  else if ($('.gamedetails').hasClass('visible')){
+    $(".gamecarousel").empty();
+    console.log("clicking when not hidden");
 
+  //document.getElementById("gamedetails").style.visibility = 'visible';
+  document.getElementById("gametitle").innerHTML = jsonData.games[id].title;
+  document.getElementById("gamedescription").innerHTML = jsonData.games[id].description;
+  this.fillGameCarousel(id);
+  document.getElementById("teamname").innerHTML = jsonData.games[id].teamname;
+  document.getElementById("teammembers").innerHTML = jsonData.games[id].teammembers;
+  }
+  }
 
   render() {
 
@@ -55,54 +81,55 @@ class Games extends Component {
                 <h1 className="title">Games</h1>
               </ScrollableAnchor>
                 <div className="row">
-                 <div id="001" className="col-md-6 game container">
-                 <img className="image" onClick={() => this.showGamesection(0)} src={Catharsis} alt="" />
-                 <div onClick={() => this.showGamesection(0)} className="middle"><div onClick={() => this.showGamesection(0)} className="text">CATharsis</div></div>
+                 <div id="001" onClick={() => this.showGamesection(0)} className="col-md-6 game container">
+                 <img className="image" src={Catharsis} alt="" />
+                 <div className="middle"><div className="text">CATharsis</div></div>
                  </div>
-                 <div id="002" className="col-md-6 game container">
-                 <img className="image" onClick={() => this.showGamesection(1)} src={BrutForce} alt="" />
-                 <div onClick={() => this.showGamesection(1)} className="middle"><div onClick={() => this.showGamesection(1)} className="text">Brut Force</div></div>
+                 <div id="002" onClick={() => this.showGamesection(1)}  className="col-md-6 game container">
+                 <img className="image" src={BrutForce} alt="" />
+                 <div className="middle"><div className="text">Brut Force</div></div>
                  </div>
                 </div>
                 <div className="row">
-                  <div id="003" className="col-md-6 game container">
-                  <img className="image" onClick={() => this.showGamesection(2)} src={Counttown} alt="" />
-                  <div onClick={() => this.showGamesection(2)} className="middle"><div onClick={() => this.showGamesection(2)} className="text">Counttown</div></div>
+                  <div id="003" onClick={() => this.showGamesection(2)}  className="col-md-6 game container">
+                  <img className="image" src={Counttown} alt="" />
+                  <div className="middle"><div className="text">Counttown</div></div>
 
                   </div>
-                  <div id="004" className="col-md-6 game container">
-                  <img className="image" onClick={() => this.showGamesection(3)} src={Kraut} alt="" />
-                  <div onClick={() => this.showGamesection(3)} className="middle"><div onClick={() => this.showGamesection(3)} className="text">Kraut und Rüben</div></div>
+                  <div id="004" onClick={() => this.showGamesection(3)} className="col-md-6 game container">
+                  <img className="image" src={Kraut} alt="" />
+                  <div className="middle"><div className="text">Kraut und Rüben</div></div>
                   </div>
                 </div>
                 <div className="row">
-                   <div id="005" className="col-md-6 game container">
-                   <img className="image" onClick={() => this.showGamesection(4)} src={Santa} alt="" />
-                   <div onClick={() => this.showGamesection(4)} className="middle"><div onClick={() => this.showGamesection(4)} className="text">Santa's Dash Driver</div></div>
+                   <div id="005" onClick={() => this.showGamesection(4)} className="col-md-6 game container">
+                   <img className="image" src={Santa} alt="" />
+                   <div className="middle"><div className="text">Santas Dash Driver</div></div>
                    </div>
-                   <div id="006" className="col-md-6 game container">
-                   <img className="image" onClick={() => this.showGamesection(5)} src={Smash} alt="" />
-                   <div onClick={() => this.showGamesection(5)} className="middle"><div onClick={() => this.showGamesection(5)} className="text">SMASHTRONAUT</div></div>
+                   <div id="006" onClick={() => this.showGamesection(5)} className="col-md-6 game container">
+                   <img className="image" src={Smash} alt="" />
+                   <div className="middle"><div className="text">SMASHTRONAUT</div></div>
                    </div>
                 </div>
                 <div className="row">
-                   <div id="007" className="col-md-6 game container">
-                   <img className="image" onClick={() => this.showGamesection(6)} src={YouOnly} alt="" />
-                   <div onClick={() => this.showGamesection(6)} className="middle"><div onClick={() => this.showGamesection(6)} className="text">YouOnlyDieOnce</div></div>
+                   <div id="007" onClick={() => this.showGamesection(6)} className="col-md-6 game container">
+                   <img className="image" src={YouOnly} alt="" />
+                   <div className="middle"><div className="text">YouOnlyDieOnce</div></div>
 
                    </div>
-                   <div id="008" className="col-md-6 game container">
-                   <img className="image" onClick={() => this.showGamesection(6)} src={YouOnly} alt="" />
-                   <div onClick={() => this.showGamesection(6)} className="middle"><div onClick={() => this.showGamesection(6)} className="text">YouOnlyDieOnce</div></div>
+                   <div id="008" onClick={() => this.showGamesection(6)} className="col-md-6 game container">
+                   <img className="image" src={YouOnly} alt="" />
+                   <div className="middle"><div className="text">YouOnlyDieOnce</div></div>
                    </div>
 
                 </div>
             </div>
-            <div id="gamedetails" className="col-md-5 gamedetails">
+            <div id="gamedetails" className="col-md-5 gamedetails hidden">
             <br/>
             <div className="col-md-2 backcontainer">
               <img className="backbutton" onClick={this.hideGamesection} src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E" />
             </div>
+
             <div className="row">
                 <div className="col-md-6 col-offset-6 gametitle">
                   <h1 id="gametitle"></h1>
