@@ -192,7 +192,7 @@ body{
       .hidden {
         visibility: hidden;
         opacity: 0;
-        transition: opacity 0.5s 2s, opacity 2s linear;
+        transition: opacity 0.5s 0.5s, opacity 2s linear;
       }
 
       .backbutton{
