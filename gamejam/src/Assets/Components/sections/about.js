@@ -16,7 +16,7 @@ class About extends Component {
           <div className="col-md-7 opaque"></div>
             <div className="col-md-5 shown">
             <ScrollableAnchor id={'about'}>
-              <h1>About section</h1>
+              <h1>About</h1>
             </ScrollableAnchor>
               <p>
               <br/>

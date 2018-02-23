@@ -1,11 +1,14 @@
 @import "_config.scss";
 
 body{
-  background: $background;
+background-size: 20px 20px;
+background-image: linear-gradient(to right, lightBlue 1px, transparent 1px), linear-gradient(to bottom, lightBlue 1px, transparent 1px);
+
   h1{
     display: inline;
-    border-bottom: 8px solid $lightBlue;
+    border-bottom: 6px solid $lightBlue;
     font-family: $oswald;
+
   }
   h2{
     display: inline;
@@ -16,7 +19,7 @@ body{
 .header {
   position: fixed;
   display: block;
-  background: $darkerGrey;
+  background: $white;
   color: $black;
   max-height: 20%;
   z-index: 1;
@@ -24,7 +27,7 @@ body{
   .logo{
     position: relative;
     top: 50%;
-    left: 15px;
+    left: 100px;
     margin: auto;
     @include translateY(-50%);
     max-height: 100px;
@@ -62,7 +65,7 @@ body{
 }
 
 .home {
-  background: $backgroundOpaque;
+  background: rgba(245,245,245,0.8);
   margin-top: 150px;
   width: 100%;
 
@@ -107,7 +110,7 @@ body{
 }
 
 .games{
-  background: $backgroundOpaque;
+  background: rgba(245,245,245,0.8);
   position: relative;
   margin-top: 30px;
 
@@ -117,8 +120,8 @@ body{
 
     .title {
       display: inline;
-      border-bottom: 8px solid $lightBlue;
       font-family: $oswald;
+      //border-bottom: 8px solid $lightBlue;
     }
     .container{
       &:hover{
@@ -132,7 +135,7 @@ body{
     }
     .game{
       margin: auto;
-      padding: 15px;
+      padding: 20px 10px;
 
       .middle {
         transition: 0.7s ease;
@@ -156,7 +159,7 @@ body{
       }
 
       .image {
-        padding: 1px;
+        padding: 0px;
         border: 1px solid $black;
         width: 100%;
         display: block;
@@ -170,8 +173,6 @@ body{
 
     }
   }
-
-
 
   .gamedetails{
       background: $white;
@@ -239,15 +240,11 @@ body{
   margin-top: 30px;
   display: table;
   position: relative;
-  background: $white;
+  background: rgba(245,245,245,0.8);
 
   .middle{
     vertical-align: middle;
 
-  .opaque{
-    background: $background;
-    opacity: 0.5;
-  }
   .shown{
     background: $white;
   }
@@ -256,6 +253,7 @@ body{
     text-align: center;
 
   }
+
   p{
     font-family: $opensans;
     text-align:left;

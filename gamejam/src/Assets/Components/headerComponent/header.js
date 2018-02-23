@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from '../../Resources/Images/Misc/logo.png';
 
 class Header extends Component {
+
   render() {
     return (
         <div className="container-fluid header">
@@ -23,5 +24,7 @@ class Header extends Component {
     );
   }
 }
+
+
 
 export default Header;
