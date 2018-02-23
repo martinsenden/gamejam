@@ -17,7 +17,7 @@ class Games extends Component {
 
   hideGamesection(){
     //document.getElementById("gamedetails").style.visibility = 'hidden';
-    $(".gamedetails").css({"visibility": "hidden"});
+    $(".gamedetails").css({"visibility": "hidden", "opacity": "0"});
     $(".gamedetails").removeClass("visible");
     $(".gamedetails").addClass("hidden");
     console.log("hello");
@@ -49,7 +49,8 @@ class Games extends Component {
       $(".gamecarousel").empty();
     $('.gamedetails').removeClass('hidden');
     $('.gamedetails').addClass("visible");
-    document.getElementById("gamedetails").style.visibility = 'visible';
+    $(".gamedetails").css({"visibility": "visible", "opacity": "1"});
+    //document.getElementById("gamedetails").style.visibility = 'visible';
     document.getElementById("gametitle").innerHTML = jsonData.games[id].title;
     this.fillGameCarousel(id);
     document.getElementById("gamedescription").innerHTML = jsonData.games[id].description;
