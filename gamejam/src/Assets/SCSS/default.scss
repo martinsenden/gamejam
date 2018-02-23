@@ -187,11 +187,15 @@ body{
       .gametitle {
         margin-top: 10px;
         margin-left: 30px;
+        transition: .7s ease;
+
       }
 
       .gameimage{
         margin-top: 30px;
         margin-left: 30px;
+        transition: .7s ease;
+
           img{
             width: 100%;
           }
@@ -199,6 +203,8 @@ body{
     .gamedescription{
       margin-left: 30px;
       margin-top: 30px;
+      transition: .7s ease;
+
         h4{
           font-family: $oswald;
           font-size: 20px;
@@ -214,6 +220,8 @@ body{
         margin-top: 10px;
         font-family: $opensans;
         font-size: 12px;
+        transition: .7s ease;
+
       }
     }
   }
