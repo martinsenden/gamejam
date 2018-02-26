@@ -1,5 +1,5 @@
 export default function sketch(p){
-  var gridX = 0;
+var gridX = 0;
 var gridY = 0;
 var timer = 0, animationDuration = 2000;
 
@@ -13,7 +13,7 @@ var dot1X, dot1Y, dot2X, dot2Y, dot3X, dot3Y, dot4X, dot4Y, dot5X, dot5Y, dot6X,
 
 
 p.setup = function() {
- p.createCanvas(600, 600);
+ p.createCanvas(200, 200);
 
   gridX = p.width/50;
   gridY = p.height/50;
@@ -56,10 +56,10 @@ p.background(255,255,255);
 //grid
   p.stroke(144, 255, 171);
   p.strokeWeight(1);
-  for (var i = 0; i < p.width; i+=gridX) {
+  for (var i = 0; i < p.width; i+=gridX*3) {
     p.line (i, 0, i, p.height);
   }
-  for (var i = 0; i < p.height; i+=gridY) {
+  for (var i = 0; i < p.height; i+=gridY*3) {
     p.line (0, i, p.width, i);
   }
 
@@ -74,7 +74,7 @@ p.background(255,255,255);
 
   //hexagon
   p.stroke(0, 0, 0);
-  p.strokeWeight(4);
+  p.strokeWeight(2);
   p.noFill();
   p.beginShape();
   p.vertex(gridX*15, gridY*8);
@@ -90,7 +90,7 @@ p.background(255,255,255);
   //J
   p.noFill();
   p.stroke(162,225,240);
-  p.strokeWeight(40);
+  p.strokeWeight(20);
   p.strokeCap(p.SQUARE);
   p.beginShape();
   p.vertex(pkt1X, pkt1Y);

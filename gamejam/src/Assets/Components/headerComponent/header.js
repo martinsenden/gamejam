@@ -10,8 +10,9 @@ class Header extends Component {
         <div className="container-fluid header">
           <div className="row">
             <div className="col-md-4">
-                //<a href="#home"><img className="logo" src={ logo } alt=""/></a>
+            <div className="logo">
                 <P5Wrapper sketch={sketch}/>
+                </div>
             </div>
             <div className="col-md-8">
               <nav className="navigation">

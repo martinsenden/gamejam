@@ -19,11 +19,13 @@ background-image: linear-gradient(to right, lightBlue 1px, transparent 1px), lin
 .header {
   position: fixed;
   display: block;
-  background: $white;
+  background: white;
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, yellow 1px, transparent 1px), linear-gradient(to bottom, yellow 1px, transparent 1px);
   color: $black;
-  max-height: 20%;
+  height: 200px;
   z-index: 1;
-  margin-top: -150px;
+  margin-top: -230px;
   .logo{
     position: relative;
     top: 50%;
@@ -38,9 +40,13 @@ background-image: linear-gradient(to right, lightBlue 1px, transparent 1px), lin
       padding: 0;
   }
 
+.logo {
+  margin-left: 0px;
+}
+
   .navigation {
     position: absolute;
-    top: 50%;
+    top: 100px;
     right: 15px;
     @include translateY(-50%);
 
@@ -70,7 +76,7 @@ background-image: linear-gradient(to right, lightBlue 1px, transparent 1px), lin
 
 .home {
   background: rgba(245,245,245,0.8);
-  margin-top: 150px;
+  margin-top: 230px;
   width: 100%;
 
   p{
@@ -315,8 +321,10 @@ background-image: linear-gradient(to right, lightBlue 1px, transparent 1px), lin
     height: 300px;
     margin-top: 50px;
     h1 {
-        font-family: $oswald;
+      font-family: $oswald;
       text-align: center;
+      border-bottom: 8px solid $yellow;
+
     }
   }
   .address{
