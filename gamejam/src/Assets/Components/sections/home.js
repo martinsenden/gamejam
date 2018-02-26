@@ -15,6 +15,8 @@ class Home extends Component {
             autoplay: 0,
             modestbranding: 1,
             showinfo: 0,
+            width: 1280,
+            height: 720
           }
         };
 

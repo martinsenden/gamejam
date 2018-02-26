@@ -138,7 +138,7 @@ class Games extends Component {
                 </div>
             </div>
             <div className="row">
-              <div className="col-md-4 col-md-offset-8 gameimage">
+              <div className="col-md-8 col-md-offset-4 gameimage">
               <div id="gameCarousel" className="carousel slide" data-ride="carousel" data-interval="false">
                 <div className="carousel-inner gamecarousel" role="listbox">
 

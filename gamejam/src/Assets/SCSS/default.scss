@@ -34,8 +34,8 @@ background-image: linear-gradient(to right, lightBlue 1px, transparent 1px), lin
   }
 
   nav, nav ul, nav ul li{
-    margin: 0;
-    padding: 0;
+      margin: 0;
+      padding: 0;
   }
 
   .navigation {
@@ -52,13 +52,17 @@ background-image: linear-gradient(to right, lightBlue 1px, transparent 1px), lin
       text-decoration: none;
     }
     .link {
+      @media screen and (min-width: 1200px){
+        font-size: 30px;
+    }
     font-size: 25px;
     line-height: normal;
     font-family: $oswald;
       &:hover, :link, :active{
         text-decoration: none;
-        font-size: 30px;
-
+        @media screen and (min-width: 1200px){
+          font-size: 40px;
+        }
       }
     }
   }
@@ -69,10 +73,9 @@ background-image: linear-gradient(to right, lightBlue 1px, transparent 1px), lin
   margin-top: 150px;
   width: 100%;
 
-
   p{
-  font-size: 23px;
-  color: $white;
+    font-size: 23px;
+    color: $white;
   }
 
   .tmpCarousel {
@@ -81,9 +84,16 @@ background-image: linear-gradient(to right, lightBlue 1px, transparent 1px), lin
     margin-bottom: 20px;
     margin-top: 20px;
     height: auto;
+
+    @media screen and (min-width: 1000px){
+
+    }
      .carousel-control-prev{
        width: 5%;
        margin-left: -10%;
+       @media screen and (min-width: 1500px){
+         margin-left: 0%;
+       }
      }
      .carousel-control-prev-icon{
        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
@@ -96,17 +106,29 @@ background-image: linear-gradient(to right, lightBlue 1px, transparent 1px), lin
     .carousel-control-next{
       width: 5%;
       margin-right: -10%;
-
+      @media screen and (min-width: 1000px){
+        margin-right: 0%;
+      }
+    }
     }
       .ytplayer{
-        //max-width: 578px;
-        //max-width: 100%;
-        width: 100%;
+        width: 75%;
+        @media screen and (min-width: 1600px){
+          height: 500px;
+          margin-left: 12.5%;
+          //width: 75%;
+        }
       }
       .carouselImage{
-        //max-height: 366px;
+        @media screen and (max-width: 336px){
+          max-height: 360px;
+        }
+
+        @media screen and (min-width: 1600px){
+          width: 80%;
+          margin-left: 10%;
+        }
       }
-  }
 }
 
 .games{
@@ -216,16 +238,33 @@ background-image: linear-gradient(to right, lightBlue 1px, transparent 1px), lin
     .gamedescription{
       margin-left: 30px;
       margin-top: 30px;
+        .gametitle{
+          font-size: 2.5rem;
+          @media screen and (min-width: 1600px){
+            //font-size: 60px;
+          }
+        }
         h4{
           font-family: $oswald;
           font-size: 20px;
+          @media screen and (min-width: 1000px){
+          font-family: $oswald;
+          font-size: 30px;
+        }
         }
         p{
           font-family: $opensans;
           font-size: 14px;
+          @media screen and (min-width: 1000px){
+          font-family: $opensans;
+          font-size: 17px;
+        }
         }
         .team{
           font-size: 10px;
+          @media screen and (min-width: 1000px){
+          font-size: 15px;
+        }
         }
       .gamedownload{
         margin-top: 10px;
