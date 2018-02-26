@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../../Resources/Images/Misc/logo.png';
+import P5Wrapper from 'react-p5-wrapper';
+import sketch from '../../Resources/Sketches/P5logo'
 
 class Header extends Component {
 
@@ -8,7 +10,8 @@ class Header extends Component {
         <div className="container-fluid header">
           <div className="row">
             <div className="col-md-4">
-                <a href="#home"><img className="logo" src={ logo } alt=""/></a>
+                //<a href="#home"><img className="logo" src={ logo } alt=""/></a>
+                <P5Wrapper sketch={sketch}/>
             </div>
             <div className="col-md-8">
               <nav className="navigation">
