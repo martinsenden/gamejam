@@ -56,10 +56,10 @@ p.background(255,255,255);
 //grid
   p.stroke(144, 255, 171);
   p.strokeWeight(1);
-  for (var i = 0; i < p.width; i+=gridX*3) {
+  for (var i = 0; i < p.width; i+=gridX*8) {
     p.line (i, 0, i, p.height);
   }
-  for (var i = 0; i < p.height; i+=gridY*3) {
+  for (var i = 0; i < p.height; i+=gridY*8) {
     p.line (0, i, p.width, i);
   }
 

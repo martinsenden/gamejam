@@ -24,12 +24,12 @@ body{
   background-size: 40px 40px;
   background-image: linear-gradient(to right, $darkerGrey 1px, transparent 1px), linear-gradient(to bottom, $darkerGrey 1px, transparent 1px);
   color: $black;
-  height: 175px;
+  height: 150px;
   z-index: 1;
   margin-top: -230px;
   .logo{
     position: relative;
-    top: 50%;
+    top: 67px;
     left: 100px;
     margin: auto;
     @include translateY(-42.5%);
@@ -38,13 +38,13 @@ body{
 
   nav, nav ul, nav ul li{
       margin: 0;
-      padding: 0;
+      padding: 30px;
   }
 
   .navigation {
     position: absolute;
-    top: 100px;
-    right: 15px;
+    top: 70px;
+    right: -200px;
     @include translateY(-50%);
 
     .listitem {
