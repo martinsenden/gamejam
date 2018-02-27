@@ -63,9 +63,7 @@ body{
     font-family: $oswald;
       &:hover, :link, :active{
         text-decoration: none;
-        @media screen and (min-width: 1200px){
-          font-size: 40px;
-        }
+        border-bottom: 8px solid $yellow;
       }
     }
   }

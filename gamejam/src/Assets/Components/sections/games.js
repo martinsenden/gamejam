@@ -41,6 +41,8 @@ class Games extends Component {
   showGamesection(id){
     if ($('.gamedetails').hasClass('hidden')){
       $(".gamecarousel").empty();
+      $(".gameimageset").empty();
+
       $('.gamedetails').removeClass('hidden');
       $('.gamedetails').addClass("visible");
       $(".gamedetails").css({"visibility": "visible", "opacity": "1"});

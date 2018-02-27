@@ -36,7 +36,7 @@ class Home extends Component {
               <div id="myCarousel" className="carousel slide" data-ride="carousel" data-interval="false">
                 <div className="carousel-inner" role="listbox">
                     <div className="carousel-item active">
-                      <YouTube className="ytplayer" videoId="M7lc1UVf-VE" opts={opts} />
+                      <YouTube className="ytplayer" videoId="fWGxoUG7ySI" opts={opts} />
                     </div>
                     <div className="carousel-item">
                       <img className="d-block img-fluid carouselImage" src={ slide1 }/>
