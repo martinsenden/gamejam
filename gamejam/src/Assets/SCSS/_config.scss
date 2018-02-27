@@ -44,11 +44,9 @@ Mixins
 }
 a {
   color: black;
-
-  //@include transition(.7s ease);
   &:hover{
     cursor: default;
-    color: $lightBlue;
+    //color: $lightBlue;
     @include transition(.7s ease-in-out)
   }
 }
