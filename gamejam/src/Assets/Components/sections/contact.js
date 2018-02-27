@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SimpleMap from './simplemap.js';
-import ScrollableAnchor from 'react-scrollable-anchor'
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 
 class Contact extends Component {
@@ -19,11 +19,13 @@ class Contact extends Component {
                     </p>
                 </div>
             </div>
-              <div className="col-md-4 inner">
+              <div className="col-md-3 inner">
                 <ScrollableAnchor id={'contact'}>
                   <h1 className="title">Contact</h1>
                 </ScrollableAnchor>
+                <div className="map">
                   <SimpleMap/>
+                </div>
               </div>
           </div>
         </div>

@@ -13,7 +13,7 @@ var dot1X, dot1Y, dot2X, dot2Y, dot3X, dot3Y, dot4X, dot4Y, dot5X, dot5Y, dot6X,
 
 
 p.setup = function() {
- p.createCanvas(200, 200);
+ p.createCanvas(150, 150);
 
   gridX = p.width/50;
   gridY = p.height/50;
@@ -90,7 +90,7 @@ p.background(255,255,255);
   //J
   p.noFill();
   p.stroke(162,225,240);
-  p.strokeWeight(20);
+  p.strokeWeight(15);
   p.strokeCap(p.SQUARE);
   p.beginShape();
   p.vertex(pkt1X, pkt1Y);
