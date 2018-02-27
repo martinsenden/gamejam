@@ -26,20 +26,14 @@ class Games extends Component {
   fillGameCarousel(id){
     var m = jsonData.games[id].images;
     console.log(m);
-    /*for(var i=0; i< m.length; i++) {
-      if(i===0){
-        $('<div className="carousel-item gamecarouselitem active"><img className="d-block img-fluid" src="'+m[i].url+'">  </div>').appendTo('.gamecarousel');
-      } else{
-        $('<div className="carousel-item gamecarouselitem"><img className="d-block img-fluid" src="'+m[i].url+'">  </div>').appendTo('.gamecarousel');
-      }
-    }*/
+    for(var i=0 ; i< m.length ; i++) {
+      $('<div class="carousel-item gamecarouselitem"><img src="'+m[i].url+'"></div>').appendTo('.gamecarousel');
+    }
 
     for(var i=0 ; i< m.length ; i++) {
-    $('<div class="carousel-item gamecarouselitem"><img src="'+m[i].url+'"></div>').appendTo('.gamecarousel');
+      $('<img class="gamesetitem" src="'+m[i].url+'"></div>').appendTo('.gameimageset');
     }
-  $('.gamecarouselitem').first().addClass('active');
-  //$('.carousel-indicators > li').first().addClass('active');
-  //$('#gameCarousel').carousel();
+    $('.gamecarouselitem').first().addClass('active');
   }
 
 
@@ -47,28 +41,26 @@ class Games extends Component {
   showGamesection(id){
     if ($('.gamedetails').hasClass('hidden')){
       $(".gamecarousel").empty();
-    $('.gamedetails').removeClass('hidden');
-    $('.gamedetails').addClass("visible");
-    $(".gamedetails").css({"visibility": "visible", "opacity": "1"});
-    //document.getElementById("gamedetails").style.visibility = 'visible';
-    document.getElementById("gametitle").innerHTML = jsonData.games[id].title;
-    this.fillGameCarousel(id);
-    document.getElementById("gamedescription").innerHTML = jsonData.games[id].description;
-    document.getElementById("teamname").innerHTML = jsonData.games[id].teamname;
-    document.getElementById("teammembers").innerHTML = jsonData.games[id].teammembers;
-  }
+      $('.gamedetails').removeClass('hidden');
+      $('.gamedetails').addClass("visible");
+      $(".gamedetails").css({"visibility": "visible", "opacity": "1"});
+      document.getElementById("gametitle").innerHTML = jsonData.games[id].title;
+      this.fillGameCarousel(id);
+      document.getElementById("gamedescription").innerHTML = jsonData.games[id].description;
+      document.getElementById("teamname").innerHTML = jsonData.games[id].teamname;
+      document.getElementById("teammembers").innerHTML = jsonData.games[id].teammembers;
+    }
 
   else if ($('.gamedetails').hasClass('visible')){
-    $(".gamecarousel").empty();
-    console.log("clicking when not hidden");
-
-  //document.getElementById("gamedetails").style.visibility = 'visible';
-  document.getElementById("gametitle").innerHTML = jsonData.games[id].title;
-  document.getElementById("gamedescription").innerHTML = jsonData.games[id].description;
-  this.fillGameCarousel(id);
-  document.getElementById("teamname").innerHTML = jsonData.games[id].teamname;
-  document.getElementById("teammembers").innerHTML = jsonData.games[id].teammembers;
-  }
+      $(".gamecarousel").empty();
+      $(".gameimageset").empty();
+      console.log("clicking when not hidden");
+      document.getElementById("gametitle").innerHTML = jsonData.games[id].title;
+      document.getElementById("gamedescription").innerHTML = jsonData.games[id].description;
+      this.fillGameCarousel(id);
+      document.getElementById("teamname").innerHTML = jsonData.games[id].teamname;
+      document.getElementById("teammembers").innerHTML = jsonData.games[id].teammembers;
+    }
   }
 
   render() {
@@ -153,6 +145,8 @@ class Games extends Component {
                 </a>
               </div>
               </div>
+            </div>
+            <div className="col-md-12 gameimageset">
             </div>
             <div className="gamedescription">
                 <h4>Game description</h4>

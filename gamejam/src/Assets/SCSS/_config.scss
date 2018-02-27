@@ -45,10 +45,10 @@ Mixins
 a {
   color: black;
 
-  @include transition(.4s ease);
+  //@include transition(.7s ease);
   &:hover{
     cursor: default;
     color: $lightBlue;
-    @include transition(.2s ease-in-out)
+    @include transition(.7s ease-in-out)
   }
 }

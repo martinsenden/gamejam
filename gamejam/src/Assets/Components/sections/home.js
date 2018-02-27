@@ -5,9 +5,14 @@ import slide1 from '../../Resources/Images/Misc/IMG_9208.jpg';
 import slide2 from '../../Resources/Images/Misc/IMG_9213.jpg';
 import slide3 from '../../Resources/Images/Misc/IMG_9230.jpg';
 import ScrollableAnchor from 'react-scrollable-anchor';
+import { configureAnchors } from 'react-scrollable-anchor'
 
 
 class Home extends Component {
+
+  componentWillMount() {
+    configureAnchors({offset: 20, scrollDuration: 200});
+  }
 
   render() {
     var opts = {

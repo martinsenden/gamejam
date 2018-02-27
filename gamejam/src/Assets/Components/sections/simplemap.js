@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import logo from '../../Resources/Images/Misc/logo.png';
+import P5Wrapper from 'react-p5-wrapper';
+import sketch from '../../Resources/Sketches/p5maplogo';
 
-const MarkerIcon = () => (<img src={logo} style={{height: 59.63, width: 69}}/>);
+//const MarkerIcon = () => (<img src={logo} style={{height: 59.63, width: 69}}/>);
+const MarkerIcon = () => (<P5Wrapper sketch={sketch}/>);
 
 class SimpleMap extends React.Component {
   static defaultProps = {
@@ -16,9 +19,9 @@ class SimpleMap extends React.Component {
         defaultCenter={this.props.center}
         defaultZoom={this.props.zoom}
       >
-        <MarkerIcon className="markericon"
-          lat={48.3686000}
-          lng={14.5131392} />
+        <MarkerIcon className="markerIcon"
+          lat={48.368912}
+          lng={14.512721} />
       </GoogleMapReact>
     );
   }
