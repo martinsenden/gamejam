@@ -12,7 +12,7 @@ class Header extends Component {
             <div className="col-md-4">
             <div className="logo">
                 <P5Wrapper sketch={sketch}/>
-                </div>
+            </div>
             </div>
             <div className="col-md-8">
               <nav className="navigation">
