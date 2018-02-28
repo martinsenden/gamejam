@@ -16,7 +16,6 @@ var jsonData = require('../../Resources/Data/games.json');
 class Games extends Component {
 
   hideGamesection(){
-    //document.getElementById("gamedetails").style.visibility = 'hidden';
     $(".gamedetails").css({"visibility": "hidden", "opacity": "0"});
     $(".gamedetails").removeClass("visible");
     $(".gamedetails").addClass("hidden");

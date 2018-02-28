@@ -6,7 +6,6 @@ import Home from './Assets/Components/sections/home.js';
 import Games from './Assets/Components/sections/games';
 import About from './Assets/Components/sections/about';
 import Contact from './Assets/Components/sections/contact';
-import Burger from './Assets/Components/sections/burger.js';
 
 
 class App extends Component {
@@ -16,8 +15,6 @@ class App extends Component {
 
         <Header />
         <Home />
-        <Burger />
-
         <Games />
         <About />
         <Contact />
