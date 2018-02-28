@@ -9,7 +9,7 @@ class Contact extends Component {
     return (
         <div className="container-fluid contact">
             <div className="row">
-              <div className="col-md-6 address">
+              <div className="col-md-4 address">
                   <div className="center">
                     <p>
                       Softwarepark 23<br/>
@@ -19,7 +19,7 @@ class Contact extends Component {
                     </p>
                 </div>
             </div>
-              <div className="col-md-3 inner">
+              <div className="col-md-4 inner">
                 <ScrollableAnchor id={'contact'}>
                   <h1 className="title">Contact</h1>
                 </ScrollableAnchor>

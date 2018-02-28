@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import YouTube from 'react-youtube';
 import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
-import slide1 from '../../Resources/Images/Misc/IMG_9208.jpg';
-import slide2 from '../../Resources/Images/Misc/IMG_9213.jpg';
+import slide1 from '../../Resources/Images/Misc/IMG_9191.jpg';
+import slide2 from '../../Resources/Images/Misc/IMG_9202.jpg';
 import slide3 from '../../Resources/Images/Misc/IMG_9230.jpg';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import { configureAnchors } from 'react-scrollable-anchor'

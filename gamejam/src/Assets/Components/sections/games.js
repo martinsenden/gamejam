@@ -20,29 +20,28 @@ class Games extends Component {
     $(".gamedetails").css({"visibility": "hidden", "opacity": "0"});
     $(".gamedetails").removeClass("visible");
     $(".gamedetails").addClass("hidden");
-    console.log("hello");
   }
 
   fillGameCarousel(id){
     var m = jsonData.games[id].images;
     console.log(m);
     for(var i=0 ; i< m.length ; i++) {
-      $('<div class="carousel-item gamecarouselitem"><img src="'+m[i].url+'"></div>').appendTo('.gamecarousel');
-    }
-
-    for(var i=0 ; i< m.length ; i++) {
-      $('<img class="gamesetitem" src="'+m[i].url+'"></div>').appendTo('.gameimageset');
+      $('<div id="gameimage'+i+'" class="carousel-item gamecarouselitem"><img src="'+m[i].url+'"></div>').appendTo('.gamecarousel');
     }
     $('.gamecarouselitem').first().addClass('active');
+    for(var i=0 ; i< m.length ; i++) {
+      $('<img id="'+i+'" class="img-thumbnail" src="'+m[i].url+'">').appendTo('.gameimageset');
+      $('.img-thumbnail').on("click", function(){
+        var imgId = $(this).attr('id');
+        $('.gamecarousel').find('.active').removeClass('active');
+        $('.gamecarousel').find("#gameimage"+imgId).addClass('active');
+      });
+    }
   }
-
-
-
   showGamesection(id){
     if ($('.gamedetails').hasClass('hidden')){
       $(".gamecarousel").empty();
       $(".gameimageset").empty();
-
       $('.gamedetails').removeClass('hidden');
       $('.gamedetails').addClass("visible");
       $(".gamedetails").css({"visibility": "visible", "opacity": "1"});
@@ -155,7 +154,7 @@ class Games extends Component {
                 <p id="gamedescription">Description</p>
                 <h4 id="teamname">Team name</h4>
                 <p className="team" id="teammembers">Team members</p>
-                <a className="gamedownload" href="#games">Download</a>
+                <button type="button" class="btn btn-secondary btn-lg gamedownload">Download</button>
 
             </div>
 
